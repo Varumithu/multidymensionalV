@@ -34,15 +34,18 @@ namespace mltv {
 		}
 		multivector res(first.get_dim());
 		for (size_t i = 0; i < res.get_dim(); ++i) {
-
+			res.set_coordinate(i, first.get_coordinate(i) + second.get_coordinate(i));
 		}
 	}
 
 	multivector dot_product(const multivector& first, const multivector& second) {
+		if (first.get_dim() != second.get_dim()) {
+			DifferentVecSpaces ex;
+			throw ex;
+		}
 		multivector res(first.get_dim());
 		for (size_t i = 0; i < res.get_dim(); ++i) {
-			
+			res.set_coordinate(i, first.get_coordinate(i) * second.get_coordinate(i));
 		}
-	}
 
 }
