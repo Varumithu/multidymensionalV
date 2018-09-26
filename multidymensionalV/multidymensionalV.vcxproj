@@ -120,6 +120,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="multdimv.h" />
+    <ClInclude Include="multimvex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\googletest-master\googletest-master\googletest\src\gtest-all.cc" />
